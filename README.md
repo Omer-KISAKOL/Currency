@@ -1,4 +1,8 @@
 ## Electron.js ile Döviz (Currency) Uygulaması
+
+pnpm install
+pnpm run electron:dev
+
 Bu proje, Electron.js kullanarak masaüstü bir döviz uygulaması geliştirmek için oluşturulmuştur. Kullanıcılar, farklı para birimleri arasındaki döviz kurlarını görüntüleyebilir ve anlık değişiklikleri takip edebilir.
 ### 🚀 Özellikler
 - [x] Gerçek zamanlı döviz kurları (API ile veri çekme)
