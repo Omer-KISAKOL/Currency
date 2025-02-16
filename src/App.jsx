@@ -89,7 +89,7 @@ function App() {
           </button>
         </div>
 
-        <div className={`rounded-lg shadow-lg p-6 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
+        <div className={`rounded-lg shadow-lg p-6 `}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Sol Panel - Para Birimi Seçimi ve Favoriler */}
             <div className="space-y-4">
