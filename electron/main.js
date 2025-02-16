@@ -7,7 +7,8 @@ function createWindow() {
     height: 800,
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false
+      contextIsolation: false,
+      webSecurity: false
     }
   })
 
@@ -17,7 +18,9 @@ function createWindow() {
     // DevTools'u aç
     mainWindow.webContents.openDevTools()
   } else {
-    mainWindow.loadFile(path.join(__dirname, '../dist/index.html'))
+    // Production modunda dist klasöründeki index.html'i yükle
+    const indexPath = path.join(__dirname, '../dist/index.html')
+    mainWindow.loadFile(indexPath)
   }
 }
 
