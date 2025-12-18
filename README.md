@@ -1,27 +1,60 @@
-## Electron.js ile Döviz (Currency) Uygulaması
+# Döviz Kuru Uygulaması
 
-pnpm install
-pnpm run electron:dev
+Bu, Elektron, React, Vite ve Tailwind CSS kullanılarak oluşturulmuş bir masaüstü döviz kuru uygulamasıdır. Kullanıcıların gerçek zamanlı döviz kurlarını görüntülemelerine, favori para birimlerini takip etmelerine ve geçmiş verileri görselleştirmelerine olanak tanır.
 
-Bu proje, Electron.js kullanarak masaüstü bir döviz uygulaması geliştirmek için oluşturulmuştur. Kullanıcılar, farklı para birimleri arasındaki döviz kurlarını görüntüleyebilir ve anlık değişiklikleri takip edebilir.
-### 🚀 Özellikler
-- [x] Gerçek zamanlı döviz kurları (API ile veri çekme)
-- [x] React, Tailwind CSS ve Redux Toolkit ile modern arayüz
-- [x] Favori para birimleri (Seçip takip edebilme)
-- [x] Hafif ve hızlı masaüstü uygulaması
+## Özellikler
 
-### 🔧 Kullanılan Teknolojiler
-- [x] Electron.js - Masaüstü uygulama geliştirme
-- [x] React - Kullanıcı arayüzü
-- [x] Tailwind CSS - Modern ve hızlı stilizasyon
-- [x] Redux Toolkit - Global state yönetimi
-- [x] Exchange Rate API - Döviz kurlarını almak için
-### 📡 API Kullanımı
-Projede döviz verilerini almak için aşağıdaki API kullanılacaktır:
-YOUR_API_KEY: 894b366769043adc094e4cc1
-Example Request:
-https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/USD
+- **Gerçek Zamanlı Döviz Kurları:** En son döviz kurlarını [ExchangeRate-API](https://www.exchangerate-api.com/) kullanarak alın.
+- **Favori Para Birimleri:** Kolay erişim için sık kullandığınız para birimlerini favorilerinize ekleyin ve yönetin.
+- **Tarihsel Veri Grafiği:** Seçilen bir döviz çifti için son 7 günün kur değişimini gösteren etkileşimli bir grafik.
+- **Koyu/Açık Mod:** Tercihinize göre açık ve koyu temalar arasında geçiş yapın.
+- **Çapraz Platform:** Windows, macOS ve Linux üzerinde çalışır.
 
-Burada YOUR_API_KEY kısmını size verilen API anahtarı ile değiştirmeniz gerekmektedir.
-### 📜 Lisans
-Bu proje MIT Lisansı altında sunulmaktadır.
+## Teknoloji Yığını
+
+- **Çerçeve:** Electron
+- **Ön Yüz:** React, Vite
+- **Durum Yönetimi:** Redux Toolkit
+- **Stil:** Tailwind CSS
+- **Grafikler:** Recharts
+- **İkonlar:** Heroicons
+
+## Başlarken
+
+Projeyi yerel makinenizde kurmak ve çalıştırmak için aşağıdaki adımları izleyin.
+
+### Önkoşullar
+
+- [Node.js](https://nodejs.org/) (v16 veya üstü)
+- [pnpm](https://pnpm.io/)
+
+### Kurulum
+
+1.  Depoyu klonlayın:
+    ```bash
+    git clone https://github.com/kullaniciadi/doviz-uygulamasi.git
+    cd doviz-uygulamasi
+    ```
+
+2.  Bağımlılıkları yükleyin:
+    ```bash
+    pnpm install
+    ```
+
+### Geliştirme Modunda Çalıştırma
+
+Uygulamayı geliştirme modunda başlatmak için aşağıdaki komutu çalıştırın. Bu, uygulamayı başlatacak ve dosya değişikliklerini izleyecektir.
+
+```bash
+pnpm electron:dev
+```
+
+## Üretim için Derleme
+
+Uygulamanızı dağıtım için derlemek üzere aşağıdaki komutu kullanın:
+
+```bash
+pnpm electron:build
+```
+
+Bu, işletim sisteminize bağlı olarak `dist` dizininde bir yükleyici (örneğin, `.exe`, `.dmg` veya `.AppImage`) oluşturacaktır.

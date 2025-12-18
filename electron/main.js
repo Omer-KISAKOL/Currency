@@ -8,8 +8,9 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
-    },
-  });
+      webSecurity: false
+    }
+  })
 
   // Development modunda Vite dev server'a bağlan
   if (process.env.NODE_ENV === "development") {
@@ -17,7 +18,9 @@ function createWindow() {
     // DevTools'u aç
     mainWindow.webContents.openDevTools();
   } else {
-    mainWindow.loadFile(path.join(__dirname, "../dist/index.html"));
+    // Production modunda dist klasöründeki index.html'i yükle
+    const indexPath = path.join(__dirname, '../dist/index.html')
+    mainWindow.loadFile(indexPath)
   }
 }
 
